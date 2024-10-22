@@ -1,5 +1,9 @@
 import './App.css';
-import logoHeader from './image/logoHeader.svg'
+import logoHeader from './image/logoHeader.svg';
+import logoVk from './image/logoVk.svg';
+import logoBurger from './image/logoBurger.svg';
+import lotos from './image/lotos.png';
+import develop from './image/develop.svg';
 
 const App = () => {
 
@@ -18,9 +22,17 @@ const App = () => {
             <p className='header__contactsContent'>Ломоносова 85/2</p>
           </nav>
         </div>
+        <div className='header__contentMobile'>
+        <img className='header__logoVk' src={logoVk} alt='логотип ВК'/>
+        <img className='header__logoBurger' src={logoBurger} alt='логотип бургер'/>
+        </div>
       </header>
       <main className='main'>
-
+        <section className='main__develop'>
+        <img className='main__developLogoLotos' src={lotos} alt='логотип лотос'/>
+        <img className='main__developLogoDevelop' src={develop} alt='печать'/>
+        <span className='main__developText'>Эта страница находится</span>
+        </section>
       </main>
       <footer className='footer'>
 
