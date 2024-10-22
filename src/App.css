@@ -1,0 +1,72 @@
+.App {
+  /* margin-top: 123px; */
+  /* text-align: center; */
+  background: linear-gradient(180deg, #FFFFFF 0%, #DDD9CD 100%);
+
+}
+.header {
+  min-height: 112px;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  /* flex-wrap: wrap; */
+  align-items: center;
+  gap: 30px;
+  background: #C0B9A914;
+
+}
+.header__content {
+  display: flex;
+  justify-content: space-around;
+  height: min-content;
+  gap: 10px 30px;
+  flex-wrap: wrap;
+}
+.header__menu {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.header__menuContent {
+  font-family: PT Mono;
+  font-size: 19.49px;
+  font-weight: 400;
+  line-height: 19.49px;
+  letter-spacing: -0.04em;
+  color: #DDD9CD;
+}
+.header__contactsContent {
+  font-family: PT Mono;
+  font-size: 19.49px;
+  font-weight: 400;
+  line-height: 19.49px;
+  letter-spacing: -0.04em;
+  color: #DDD9CD;
+}
+
+
+
+.header__contacts {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.main {
+  height: calc(100vh - 112px);
+  background: linear-gradient(180deg, #FFFFFF 0%, #DDD9CD 100%);
+
+}
+
+@media screen and (max-width: 1400px) {
+  .App {
+    /* margin-top: 90px; */
+  }
+}
+/* @keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
