@@ -32,7 +32,7 @@
   gap: 20px;
 }
 .header__menuContent {
-  font-family: PT Mono;
+  font-family: "PT Mono";
   font-size: 19.49px;
   font-weight: 400;
   line-height: 19.49px;
@@ -40,7 +40,7 @@
   color: #DDD9CD;
 }
 .header__contactsContent {
-  font-family: PT Mono;
+  font-family: "PT Mono";
   font-size: 19.49px;
   font-weight: 400;
   line-height: 19.49px;
@@ -79,7 +79,7 @@
   width: 77.5%;
   grid-column: 1/2;
   grid-row: 1/2;
-  opacity: 0.3;
+  opacity: 0.05;
 }
 .main__developLogoDevelop {
   width: 64.6%;
@@ -108,7 +108,7 @@
 .main__developText1 {
   grid-column: 1/2;
   grid-row: 1/2;
-  font-family: PT Mono;
+  font-family: "PT Mono";
   font-size: 32px;
   font-weight: 400;
   line-height: 32px;
@@ -168,7 +168,7 @@
 .main__designerText {
   grid-column: 1/2;
   grid-row: 1/2;
-  font-family: PT Mono;
+  font-family: "PT Mono";
   font-size: 24px;
   font-weight: 400;
   line-height: 24px;
@@ -177,9 +177,17 @@
   margin: 20px;
 }
 
+/* @media screen and (min-width: 1440px) {
+  .App {
+    width: 1440px;
+    margin: 0 auto;
+    background-color: #6D6D6D;
+  }
+} */
+
 @media screen and (max-width: 1160px) {
   .main__develop {
-    margin: 70px auto 0 ;
+    margin: 70px auto 0;
     width: 500px;
     height: 420px;
   }
@@ -259,7 +267,6 @@
     width: 300px;
     grid-column: 1/2;
     grid-row: 1/2;
-    opacity: 0.3;
   }
   .main__developLogoDevelop {
     width: 300px;
