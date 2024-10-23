@@ -42,7 +42,7 @@ const App = () => {
           <img className='main__developLogoLotos' src={lotos} alt='логотип лотос'/>
           <img className='main__developLogoDevelop' src={develop} alt='печать'/>
           <span className='main__developText'>Эта страница находится</span>
-          <span className='main__developText1'>Пожалуйста,зайдите позднее.</span>
+          <span className='main__developText1'>Пожалуйста, зайдите позднее.</span>
         </section>
         <section className='main__frontend'>
           <img className='main__frontendImg' src={front2} alt='gif-fronend' width="414" height="238"/>
