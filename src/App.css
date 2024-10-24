@@ -219,11 +219,6 @@
 
 /* --------------------------------------------------------------------------------------------------------------- */
 @media screen and (min-width: 1440px) {
-  /* .App {
-    width: 1440px;
-    margin: 0 auto;
-    background-color: #6D6D6D;
-  } */
   .main__designer {
     width: 419px;
     height: 431px;
@@ -447,13 +442,3 @@
     width: calc(95vw - 10px);
   }
 }
-
-
-/* @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
