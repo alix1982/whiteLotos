@@ -1,19 +1,16 @@
 .App {
-  /* margin-top: 123px; */
-  /* text-align: center; */
   background: linear-gradient(180deg, #FFFFFF 0%, #DDD9CD 100%);
-
 }
+
+/* --------------------------------------------------------------------------------------------------------------- */
 .header {
   min-height: 112px;
   padding: 0 40px;
   display: flex;
   justify-content: space-between;
-  /* flex-wrap: wrap; */
   align-items: center;
   gap: 30px;
   background: #C0B9A914;
-
 }
 .header__logo {
   height: max-content;
@@ -58,20 +55,21 @@
 .header__logoVk {
   background-color: transparent;
 }
+
+/* --------------------------------------------------------------------------------------------------------------- */
 .main {
   display: grid;
   height: calc(100vh - 112px);
   height: 960px;
   background: linear-gradient(180deg, #FFFFFF 0%, #DDD9CD 100%);
 }
+
+/* --------------------------------------------------------------------------------------------------------------- */
 .main__develop {
   grid-column: 1/2;
   grid-row: 1/2;
   margin: 80px 20.5% 0 35%;
-  /* align-items: center; */
   display: grid;
-  /* width: 44%; */
-  /* height: min-content; */
   width: 633px;
   height: 530px;
 }
@@ -94,7 +92,6 @@
   display: block;
   align-self: center;
   text-align: left;
-  /* margin: 0 auto; */
   grid-column: 1/2;
   grid-row: 1/2;
   width: 466px;
@@ -117,14 +114,12 @@
   align-self: self-end;
 }
 
+/* --------------------------------------------------------------------------------------------------------------- */
 .main__frontend {
   grid-column: 1/2;
   grid-row: 1/2;
   width: 28.7vw;
   height: 17.2vw;
-  
-  /* width: 414px; */
-  /* height: 248px; */
   margin-left: auto;
   display: grid;
 }
@@ -146,17 +141,12 @@
   margin: 20px;
 }
 
+/* --------------------------------------------------------------------------------------------------------------- */
 .main__designer {
   grid-column: 1/2;
   grid-row: 1/2;
   width: 29.1vw;
-  /* height: 17.2vw; */
-  /* width: 419px; */
-  /* height: 50%; */
-  /* height: 431px; */
   align-self: self-end;
-
-  /* margin-left: auto; */
   display: grid;
 }
 .main__designerImg {
@@ -177,14 +167,74 @@
   margin: 20px;
 }
 
-/* @media screen and (min-width: 1440px) {
-  .App {
+/* --------------------------------------------------------------------------------------------------------------- */
+.main__time {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  align-self: self-end;
+  margin: 0 90px 90px auto;
+}
+.main__timeHeading {
+  font-family: "PT Mono";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.04em;
+  color: #6D6D6D99;
+  margin: 0 0 10px 0;
+}
+.main__timeContent {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 16px;
+}
+.main__timeContentPoint {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main__timeContentPointNumber {
+  font-family: "PT Mono";
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: -0.04em;
+  color: #DDD9CD;
+}
+.main__timeContentPointText {
+  font-family: "PT Mono";
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 13px;
+  letter-spacing: -0.04em;
+  color: #DDD9CD;
+}
+
+/* --------------------------------------------------------------------------------------------------------------- */
+@media screen and (min-width: 1440px) {
+  /* .App {
     width: 1440px;
     margin: 0 auto;
     background-color: #6D6D6D;
+  } */
+  .main__designer {
+    width: 419px;
+    height: 431px;
   }
-} */
+  .main__frontend {
+    width: 414px;
+    height: 248px;
+  }
+}
 
+/* --------------------------------------------------------------------------------------------------------------- */
 @media screen and (max-width: 1160px) {
   .main__develop {
     margin: 70px auto 0;
@@ -198,9 +248,9 @@
   }
 }
 
+/* --------------------------------------------------------------------------------------------------------------- */
 @media screen and (max-width: 800px) {
   .main {
-    /* height: calc(100vh - 112px); */
     height: 700px;
   }
   .main__develop {
@@ -224,16 +274,20 @@
   }
   .main__frontendtext {
     font-size: 20px;
-    /* line-height: 24px; */
+    line-height: 20px;
     margin: 10px;
   }
   .main__designerText {
     font-size: 20px;
-    /* line-height: 24px; */
+    line-height: 20px;
     margin: 10px;
+  }
+  .main__time {
+    margin: 0 50px 50px auto;
   }
 }
 
+/* --------------------------------------------------------------------------------------------------------------- */
 @media screen and (max-width: 660px) {
   .header {
     min-height: 92px;
@@ -245,21 +299,19 @@
     display: flex;
     gap: 10px;
   }
+
+/* --------------------------------------------------------------------------------------------------------------- */
   .main {
     display: flex;
     flex-direction: column;
     height: calc(100% + 92px);
-    /* background: linear-gradient(180deg, #FFFFFF 0%, #DDD9CD 100%); */
   }
+
+/* --------------------------------------------------------------------------------------------------------------- */
   .main__develop {
     order: 2;
-    /* grid-column: 1/2;
-    grid-row: 1/2; */
     margin: -30px auto 0;
-    /* align-items: center; */
     display: grid;
-    /* width: 44%; */
-    /* height: min-content; */
     width: 340px;
     height: 365px;
   }
@@ -299,15 +351,11 @@
     margin-top: 325px;
   }
   
+/* --------------------------------------------------------------------------------------------------------------- */
   .main__frontend {
     order: 1;
-    /* grid-column: 1/2;
-    grid-row: 1/2; */
     width: 220px;
     height: 132px;
-    
-    /* width: 414px; */
-    /* height: 248px; */
     margin-left: auto;
     display: grid;
   }
@@ -318,25 +366,16 @@
     grid-row: 1/2;
   }
   .main__frontendtext {
-    /* grid-column: 1/2;
-    grid-row: 1/2; */
     font-size: 16px;
     line-height: 16px;
   }
   
+/* --------------------------------------------------------------------------------------------------------------- */
   .main__designer {
-    order: 3;
-    /* grid-column: 1/2;
-    grid-row: 1/2; */
+    order: 4;
     width: 200px;
     height: 206px;
-    /* width: 419px; */
-    /* height: 50%; */
-    /* height: 431px; */
     align-self: self-start;
-  
-    /* margin: 0; */
-    /* display: grid; */
   }
   .main__designerImg {
     width: 100%;
@@ -345,11 +384,67 @@
     grid-row: 1/2;
   }
   .main__designerText {
-    /* grid-column: 1/2;
-    grid-row: 1/2; */
     font-size: 16px;
     line-height: 16px;
     margin: 10px 17px;
+  }
+
+/* --------------------------------------------------------------------------------------------------------------- */
+  .main__time {
+    order: 3;
+    margin: 35px auto 25px;
+  }
+  .main__timeHeading {
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .main__timeContent {
+    gap: 31px;
+  }
+  .main__timeContentPoint {
+    width: 60px;
+    height: 60px;
+  }
+  .main__timeContentPointNumber {
+    font-size: 32px;
+    line-height: 32px;
+  }
+  .main__timeContentPointText {
+    font-size: 11px;
+    line-height: 11px;
+  }
+}
+
+/* --------------------------------------------------------------------------------------------------------------- */
+@media screen and (max-width: 380px) {
+  .main__develop {
+    width: calc(95vw - 10px);
+    overflow: hidden;
+  }
+  .main__frontend {
+    overflow: hidden;
+  }
+  .main__designer {
+    overflow: hidden;
+  }
+  .main__timeHeading {
+    font-size: 18px;
+    line-height: 18px;
+    word-wrap: break-word;
+  }
+  .main__timeContent {
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+}
+
+/* --------------------------------------------------------------------------------------------------------------- */
+@media screen and (max-width: 240px) {
+  .main__frontend {
+    width: calc(95vw - 10px);
+  }
+  .main__designer {
+    width: calc(95vw - 10px);
   }
 }
 

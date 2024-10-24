@@ -4,18 +4,34 @@ import logoVk from './image/logoVk.svg';
 import logoBurger from './image/logoBurger.svg';
 import lotos from './image/lotos.png';
 import develop from './image/develop.svg';
-import front from './image/front.gif';
-import front2 from './image/front2.gif';
-import designer from './image/designer.gif';
-import designer2 from './image/designer2.png';
-import designer3 from './image/disigner3.MP4';
-import designer4 from './image/designer4.gif';
-import designer5 from './image/designer4.gif';
-import designer6 from './image/designer6.gif';
-import designer7 from './image/designer7.gif';
-import designer8 from './image/designer8.gif';
+import front from './image/front2.gif';
+import designer from './image/designer8.gif';
+import { useState } from 'react';
+import { useEffect } from 'react';
 
 const App = () => {
+
+  const timeTarget = 1735689600;
+  const conversionDay = (60*60*24);
+  const conversionHour = (60*60);
+
+  const [time, setTime] = useState([0, 0, 0, 0]);
+
+  const calculationTime = () => {
+    const remains = Math.round(timeTarget - Date.now()/1000);
+    const day = Math.trunc(remains/conversionDay)
+    const hour = Math.trunc((remains - day*conversionDay)/conversionHour);
+    const minute = Math.trunc((remains - day*conversionDay - hour*conversionHour)/60);
+    const second = Math.trunc((remains - day*conversionDay - hour*conversionHour - minute*60));
+    setTime([day, hour, minute, second]);
+  }
+
+  useEffect(()=>{
+    const timer = setTimeout(() => {
+      calculationTime()
+    }, 1000);
+    return () => clearTimeout(timer);
+  },[time[3]]);
 
   return (
     <div className="App">
@@ -45,15 +61,33 @@ const App = () => {
           <span className='main__developText1'>Пожалуйста, зайдите позднее.</span>
         </section>
         <section className='main__frontend'>
-          <img className='main__frontendImg' src={front2} alt='gif-fronend' width="414" height="238"/>
+          <img className='main__frontendImg' src={front} alt='gif-fronend' width="414" height="238"/>
           <span className='main__frontendtext'>Frontend-разработчик...</span>
         </section>
         <section className='main__designer'>
-          {/* <video autoplay muted loop className='main__designerImg' poster={designer2} playsinline >
-            <source src={designer3} type="video/mp4"/>
-          </video> */}
-          <img className='main__designerImg' src={designer8} alt='gif-designer' width="419" height="431"/>
+          <img className='main__designerImg' src={designer} alt='gif-designer' width="419" height="431"/>
           <span className='main__designerText'>Web-дизайнер...</span>
+        </section>
+        <section className='main__time'>
+          <p className='main__timeHeading'>До запуска проекта осталось:</p>
+          <ul className='main__timeContent'>
+            <li className='main__timeContentPoint'>
+              <span className='main__timeContentPointNumber'>{(time[0] >= 0 && time[0] < 10) ? `0${time[0]}` : time[0]}</span>
+              <span className='main__timeContentPointText'>дни</span>
+            </li>
+            <li className='main__timeContentPoint'>
+              <span className='main__timeContentPointNumber'>{((time[1] -3) >= 0 && (time[1] - 3) < 10) ? `0${time[1] - 3}` : (time[1] - 3)}</span>
+              <span className='main__timeContentPointText'>часы</span>
+            </li>
+            <li className='main__timeContentPoint'>
+              <span className='main__timeContentPointNumber'>{(time[2] >= 0 && time[2] < 10) ? `0${time[2]}` : time[2]}</span>
+              <span className='main__timeContentPointText'>минуты</span>
+            </li>
+            <li className='main__timeContentPoint'>
+              <span className='main__timeContentPointNumber'>{(time[3] >= 0 && time[3] < 10) ? `0${time[3]}` : time[3]}</span>
+              <span className='main__timeContentPointText'>секунды</span>
+            </li>
+          </ul>
         </section>
       </main>
       <footer className='footer'>
